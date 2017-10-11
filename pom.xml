@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.providencegeeks</groupId>
-	<artifactId>website-api-posts</artifactId>
+	<artifactId>website-api-events</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
