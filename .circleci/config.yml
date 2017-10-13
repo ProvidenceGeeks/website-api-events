@@ -34,4 +34,4 @@ jobs:
           key: v1-dependencies-{{ checksum "pom.xml" }}
         
       # run build!
-      - run: ./mvnw clean package
+      - run: ./mvnw clean install package
