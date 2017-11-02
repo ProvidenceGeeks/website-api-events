@@ -19,7 +19,7 @@ public class EventServiceImpl implements EventService {
   }
 
   @Override
-  public List<Event> getSortedEvents() {
+  public List<Event> getEventsSortedByTime() {
 
     return eventDao.getEvents().stream().sorted((o1, o2) -> Long.compare(o1.getTime(), o2.getTime())).collect(Collectors.toList());
 

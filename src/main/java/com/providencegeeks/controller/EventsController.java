@@ -3,7 +3,6 @@ package com.providencegeeks.controller;
 import com.providencegeeks.model.Event;
 import com.providencegeeks.service.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,10 +22,10 @@ public class EventsController {
     this.eventService = eventService;
   }
 
-  @RequestMapping(value = "api/events", method = RequestMethod.GET)
+  @RequestMapping(value = "api/events", method = RequestMethod.GET, produces = "application/json")
   public List<Event> getEvents()
   {
-    return eventService.getSortedEvents();
+    return eventService.getEventsSortedByTime();
 
   }
 }

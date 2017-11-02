@@ -45,7 +45,7 @@ public class EventServiceImplTest {
 
     EventServiceImpl eventService = new EventServiceImpl(eventDao);
 
-    List<Event> sortedEvents = eventService.getSortedEvents();
+    List<Event> sortedEvents = eventService.getEventsSortedByTime();
 
     assertEquals(expectedEvents, sortedEvents);
   }

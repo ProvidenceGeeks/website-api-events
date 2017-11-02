@@ -35,13 +35,6 @@ public class EventDaoImpl implements EventDao {
       throw new RuntimeException(e);
     }
 
-//
-//    ResponseEntity<String> response = new RestTemplate().getForEntity(
-//      "https://s3.amazonaws.com/providencegeeks.com/external-services-data/meetup/meetup-data.json",
-//      new TypeReference<List<Event>>(){});
-//    return response.getBody();
-//    return null;
   }
-
 
 }
