@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-public class TestApplication {
+public class EventsApi {
 
-	public static void main(String[] args) { SpringApplication.run(TestApplication.class, args); }
+	public static void main(String[] args) { SpringApplication.run(EventsApi.class, args); }
 
-	@RequestMapping("/hello")
+	@RequestMapping("/healthcheck")
 	public String sayHello()
 	{
 		return "Hello World !!";
