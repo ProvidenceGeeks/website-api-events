@@ -59,7 +59,66 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
+      <!-- JaCoCo configuration -->
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.7.5.201505241946</version>
+        <executions>
+          <execution>
+            <id>default-prepare-agent</id>
+            <goals>
+              <goal>prepare-agent</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>default-report</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>report</goal>
+            </goals>
+          </execution>
+
+          <execution>
+            <id>default-prepare-agent-fail</id>
+            <goals>
+              <goal>prepare-agent</goal>
+            </goals>
+          </execution>
+
+          <execution>
+            <id>check</id>
+            <goals>
+              <goal>check</goal>
+            </goals>
+            <configuration><rules>
+              <rule implementation="org.jacoco.maven.RuleConfiguration">
+                <element>BUNDLE</element>
+                <limits>
+                  <limit implementation="org.jacoco.report.check.Limit">
+                    <counter>INSTRUCTION</counter>
+                    <value>COVEREDRATIO</value>
+                    <minimum>0.60</minimum>
+                  </limit>
+                  <limit implementation="org.jacoco.report.check.Limit">
+                    <counter>CLASS</counter>
+                    <value>MISSEDCOUNT</value>
+                    <maximum>0</maximum>
+                  </limit>
+                </limits>
+              </rule>
+            </rules></configuration>
+          </execution>
+
+        </executions>
+
+
+      </plugin>
+
 		</plugins>
+
+
 	</build>
 
 
