@@ -25,7 +25,6 @@ public class EventDaoImpl implements EventDao {
 
   @Override
   public List<Event> getEvents() {
-
     try {
       return objectMapper.readValue(
         eventConfig.getFileUri().toURL(),
