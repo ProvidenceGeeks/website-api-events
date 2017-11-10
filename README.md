@@ -10,8 +10,9 @@ Please review the local development environment [steps](https://github.com/Provi
 1. In your IDE, Import this project as a Maven Project
 2. To test everything works run `./mvnw spring-boot:run`
 3. Then make the following request to get the results: 
-
-    ```curl http://localhost:8080/api/events```
+    ```
+    curl http://localhost:8080/healthcheck
+    ```
 
 ## Development
 
