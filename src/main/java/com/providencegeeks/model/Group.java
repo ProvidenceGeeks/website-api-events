@@ -39,6 +39,9 @@ public class Group {
   @JsonProperty("region")
   private String region;
 
+  @JsonProperty("group_photo")
+  private String group_photo;
+
   public long getCreated() {
     return created;
   }
@@ -69,6 +72,10 @@ public class Group {
 
   public void setJoin_mode(String join_mode) {
     this.join_mode = join_mode;
+  }
+
+  public void setGroupPhoto(String group_photo) {
+    this.group_photo = group_photo;
   }
 
   public long getLat() {
@@ -117,5 +124,9 @@ public class Group {
 
   public void setRegion(String region) {
     this.region = region;
+  }
+  
+  public void getGroupPhoto(String group_photo) {
+    this.region = group_photo;
   }
 }
