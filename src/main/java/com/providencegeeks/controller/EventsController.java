@@ -26,6 +26,5 @@ public class EventsController {
   public List<Event> getEvents()
   {
     return eventService.getEventsSortedByTime();
-
   }
 }
